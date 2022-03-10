@@ -6,14 +6,14 @@ section .data
 
 section .text
 _start:
-	mov eax, 4  ; system write call
+	mov eax, 4  ; system write call code
 	mov ebx, 1  ; std out file descriptor
 	mov ecx, msg
 	mov edx, len
 	
-	int 0x80
+	int 0x80    ; interrupt for sys call
 	
-	mov eax, 1  
-	mov ebx, 42
-	int 0x80
+	mov eax, 1  ; system exit call code
+	mov ebx, 42 ; 
+	int 0x80    ; interrupt
 	

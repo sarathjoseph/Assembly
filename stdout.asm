@@ -1,4 +1,4 @@
-global _start
+global _start ; export the label so its accessible to the linker
 
 section .data
 	msg db "Hello", 0x0a

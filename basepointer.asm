@@ -29,4 +29,4 @@ func:
 	
 	mov esp, ebp   ; restore stack pointer 
 	pop ebp        ; restore base pointer
-	ret            ; pops stack pointer and does a jump to that address
+	ret            ; pops return address off the stack to the instruction pointer
